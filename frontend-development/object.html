@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math & Date Objects</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .flexbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body {
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .clock {
+        border: 1px solid purple;
+        flex-direction: column;
+        padding: 15px 30px;
+        border-radius: 12px;
+      }
+
+      .hourBox,
+      .minuteBox,
+      .secondBox {
+        width: 75px;
+        height: 75px;
+        border: 1px solid blue;
+        margin: 10px;
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      .hourLabel,
+      .minuteLabel,
+      .secondLabel {
+        width: 75px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body class="flexbox">
+    <h1>My Digital Clock</h1>
+    <div class="clock flexbox">
+      <div class="flexbox">
+        <div id="hrBox" class="hourBox flexbox">-</div>
+        <div id="minBox" class="minuteBox flexbox">-</div>
+        <div id="secBox" class="secondBox flexbox">-</div>
+      </div>
+      <div class="flexbox">
+        <div class="hourLabel flexbox">hour</div>
+        <div class="minuteLabel flexbox">minute</div>
+        <div class="secondLabel flexbox">seconds</div>
+      </div>
+    </div>
+    <script>
+      let hourBox = document.getElementById("hrBox");
+      let minBox = document.getElementById("minBox");
+      let secBox = document.getElementById("secBox");
+
+      function implementDate() {
+        let dt = new Date();
+        let hour = dt.getHours();
+        let minute = dt.getMinutes();
+        let seconds = dt.getSeconds();
+        hourBox.innerText = hour;
+        minBox.innerText = minute;
+        secBox.innerText = seconds;
+      }
+      setInterval(implementDate, 1000);
+      // year, month, day, hour, minutes, seconds, millisecond
+      //   let dt = new Date(2002, 4, 15);
+      //   console.log(dt.getDate());
+      //   console.log(dt.getDay());
+      //   console.log(dt.getFullYear());
+      //   console.log(dt.getMonth());
+      //   console.log(dt.getTime());
+
+      //   dt.setFullYear(3000);
+      //   console.log(dt);
+
+      let math = Math;
+      console.log(math);
+    </script>
+  </body>
+</html>

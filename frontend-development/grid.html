@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .floor {
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 25px;
+        height: 500px;
+        row-gap: 25px;
+      }
+
+      .flat {
+        background-color: purple;
+        margin: 0;
+      }
+
+      .flat1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .flat5 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floor">
+      <p class="flat flat1"></p>
+      <p class="flat"></p>
+      <p class="flat"></p>
+      <p class="flat"></p>
+      <p class="flat flat5"></p>
+      <p class="flat"></p>
+      <p class="flat"></p>
+    </div>
+  </body>
+</html>

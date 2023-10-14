@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="one">
+        <li>Home</li>
+        <li>About us</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <ul id="navlist">
+        <li>Home</li>
+        <li>About us</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+
+    <script>
+      let nav = document.getElementsByClassName("container");
+      console.log(nav);
+
+      let header = document.getElementById("navlist");
+      header.innerHTML = "<li>document</li>";
+      header.style.color = "red";
+      //camel case formatting
+      header.style.backgroundColor = "yellow";
+      console.log(header.innerHTML);
+
+      let element = document.querySelectorAll("#navlist");
+
+      console.log("fdsafas", element);
+    </script>
+  </body>
+</html>
