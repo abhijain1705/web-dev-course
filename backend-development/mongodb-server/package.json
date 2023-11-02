@@ -1,7 +1,7 @@
 {
-  "name": "my-first-server",
+  "name": "mongodb-server",
   "version": "1.0.0",
-  "description": "this is my first server",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "Abhi Jain",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "mongoose": "^7.6.2"
   }
